@@ -16,15 +16,15 @@ sudo ./install.sh
 2. Suis les même étape de précédemment.
 
 
-# Utilisation 
+## Utilisation 
 revolution : Affiche une citation aléatoire
 revolution <auteur> ex : lenine : Affiche une citation de Lénine
 revolution trotski : fonctionne aussi avec des alias (trotski --> trotsky)
 
 
-# Personnalisation
+## Personnalisation
 
-## Ajouter un nouvel auteur
+### Ajouter un nouvel auteur
 
 1. Créer un fichier texte (ex : Bordiga) dans le dossier du projet avec les ciations :
 " citation texte. " (ouvrage/source)
@@ -41,7 +41,7 @@ AUTEURS_CONFIG = {
 }
 ```
 
-## Ajouter un alias
+### Ajouter un alias
 
 Modifie scripts/revolution.py :
 ```python
@@ -79,5 +79,5 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Antonio Gramsci
 - Amadeo Bordiga
 
-# Licence
+## Licence
  [MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE)
