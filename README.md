@@ -5,7 +5,7 @@ Gadget pour afficher des citations marxistes dans son terminal, inspiré de la c
 
 ### Méthode 1 : Via Git (recommandé)
 ```bash
-git clone https://github.com/Kzaark/revoluion.git
+git clone https://github.com/Kzaark/revolution.git
 cd revolution/
 chmod +x install.sh
 sudo ./install.sh
@@ -30,6 +30,8 @@ revolution trotski : fonctionne aussi avec des alias (trotski --> trotsky)
 " citation texte. " (ouvrage/source)
 %
 " deuxième ciation. "
+
+--> chaque fichier texte de citations doit être séparé par un "%" obligatoirement.
 
 2. Ajoute-le dans le scripts/revolution.py :
 ```python
