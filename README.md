@@ -1,5 +1,5 @@
 # revolution
-Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande 'fortune'.
+Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 
 ## Installation
 
@@ -27,7 +27,7 @@ revolution trotski    → Les alias fonctionnent aussi (trotski → trotsky)
 
 ### Ajouter un nouvel auteur
 
-1. Crée un fichier texte (ex : "bordiga") dans le dossier du projet avec les citations :
+1. Crée un fichier texte (ex : `"bordiga"`) dans le dossier du projet avec les citations :
 ```
 " citation texte. " (ouvrage/source)
 %
@@ -75,7 +75,7 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 ### Alias déjà enregistrés
 - `trotski` --> `trotsky`
 - `marxengels` --> `marx-engels`
-- `engelsmarx --> `marx-engels`
+- `engelsmarx` --> `marx-engels`
 - `engels-marx` --> `marx-engels`
 
 ### Auteurs à venir
