@@ -4,10 +4,10 @@ import sys
 import os
 import re
 
-# 📁 Chemin ABSOLU (ne pas modifier)
+# Chemin
 FORTUNES_DIR = "/usr/local/share/terminal-fortunes"
 
-# 👥 Configuration des auteurs
+# Configuration auteurs
 AUTEURS_CONFIG = {
     "marx": {"nom": "Karl Marx"},
     "engels": {"nom": "Friedrich Engels"},
@@ -35,17 +35,17 @@ def afficher_citation(auteur=None):
         if os.path.isfile(os.path.join(FORTUNES_DIR, f)) and not f.startswith('.')
     ]
     if not fichiers:
-        print(f"⚠️  Aucun fichier trouvé dans {FORTUNES_DIR}")
+        print(f"Aucun fichier trouvé dans {FORTUNES_DIR}")
         return
 
     fichier = random.choice(fichiers) if not auteur else next((f for f in fichiers if f == auteur), None)
     if not fichier:
-        print(f"⚠️  Auteur '{auteur}' introuvable.")
+        print(f"Auteur '{auteur}' introuvable.")
         return
 
     citations = lire_citations(os.path.join(FORTUNES_DIR, fichier))
     if not citations:
-        print(f"⚠️  Aucun contenu dans {fichier}.")
+        print(f"Aucun contenu dans {fichier}.")
         return
 
     citation, source = extraire_source(random.choice(citations))
