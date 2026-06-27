@@ -27,7 +27,7 @@ revolution trotski    → Les alias fonctionnent aussi (trotski → trotsky)
 
 ### Ajouter un nouvel auteur
 
-1. Crée un fichier texte (ex : Bordiga) dans le dossier du projet avec les citations :
+1. Crée un fichier texte (ex : "bordiga") dans le dossier du projet avec les citations :
 ```
 " citation texte. " (ouvrage/source)
 %
