@@ -73,10 +73,10 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 - Clara Zetkin
 
 ### Alias déjà enregistrés
-- trotski --> trotsky
-- marxengels --> marx-engels
-- engelsmarx --> marx-engels
-- engels-marx --> marx-engels
+- `trotski` --> `trotsky`
+- `marxengels` --> `marx-engels`
+- `engelsmarx --> `marx-engels`
+- `engels-marx` --> `marx-engels`
 
 ### Auteurs à venir
 - Antonio Gramsci
@@ -84,4 +84,3 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 
 ## Licence
 [MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE)
-```
