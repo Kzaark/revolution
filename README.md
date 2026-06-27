@@ -9,7 +9,7 @@ git clone https://github.com/Kzaark/revoluion.git
 cd revolution/
 chmod +x install.sh
 sudo ./install.sh
-
+```
 
 ### Méthode 2 : Téléchargement direct
 1. Télécharge le dernier release ou clone ce dépôt.
