@@ -51,16 +51,16 @@ AUTEURS_ALIASES = {
 }
 ```
 
-# Désinstallation
+## Désinstallation
 ```bash
 sudo ./uninstall.sh
 ```
-# Infos diverses
+## Infos diverses
 Environ une quinzaine de citations par auteurs.
 
 Compatible avec les commandes 'cowsay' et 'lolcat'.
 
-## Liste des auteurs
+### Liste des auteurs
 - Friedrich Engels
 - Karl Marx
   - Karl Marx et Friedrich Engels (citations communes)
@@ -69,13 +69,13 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Trotsky
 - Clara Zetkin
 
-## Alias déjà enregistré
+### Alias déjà enregistré
 - trotski --> trotski
 - marxengels --> marx-engels
 - engelsmarx --> marx-engels
 - engels-marx --> marx-engels
 
-## Auteurs à venir
+### Auteurs à venir
 - Antonio Gramsci
 - Amadeo Bordiga
 
