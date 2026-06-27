@@ -69,7 +69,7 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Trotsky
 - Clara Zetkin
 
-### Alias déjà enregistré
+### Alias déjà enregistrés
 - trotski --> trotski
 - marxengels --> marx-engels
 - engelsmarx --> marx-engels
