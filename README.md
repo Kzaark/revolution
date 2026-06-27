@@ -1,3 +1,4 @@
+```markdown
 # revolution
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande 'fortune'.
 
@@ -13,41 +14,43 @@ sudo ./install.sh
 
 ### Méthode 2 : Téléchargement direct
 1. Télécharge le dernier release ou clone du dépôt.
-2. Suis les même étape que précédemment.
+2. Suis les même étapes que précédemment.
 
 
-## Utilisation 
+## Utilisation
+```bash
 revolution            → Affiche une citation aléatoire parmi tous les auteurs
 revolution lenine     → Affiche une citation de Lénine
 revolution trotski    → Les alias fonctionnent aussi (trotski → trotsky)
-
+```
 
 ## Personnalisation
 
 ### Ajouter un nouvel auteur
 
-1. Créer un fichier texte (ex : Bordiga) dans le dossier du projet avec les ciations :
+1. Crée un fichier texte (ex : Bordiga) dans le dossier du projet avec les citations :
+```
 " citation texte. " (ouvrage/source)
 %
-" deuxième ciation. "
+" deuxième citation. "
+```
+Chaque citation doit être séparée par un `%` obligatoirement.
 
---> chaque fichier texte de citations doit être séparé par un "%" obligatoirement.
-
-2. Ajoute-le dans le scripts/revolution.py :
+2. Ajoute-le dans `revolution.py` :
 ```python
 AUTEURS_CONFIG = {
-	"bordiga": {"nom": "Amadeo Bordiga"},
-	...
+    "bordiga": {"nom": "Amadeo Bordiga"},
+    ...
 }
 ```
 
 ### Ajouter un alias
 
-Modifie scripts/revolution.py :
+Modifie `revolution.py` :
 ```python
 AUTEURS_ALIASES = {
-	"trotski": "trotsky",
-	"marxengels": "marx-engels",
+    "trotski": "trotsky",
+    "marxengels": "marx-engels",
 }
 ```
 
@@ -55,10 +58,11 @@ AUTEURS_ALIASES = {
 ```bash
 sudo ./uninstall.sh
 ```
-## Infos diverses
-Environ une quinzaine de citations par auteurs.
 
-Compatible avec les commandes 'cowsay' et 'lolcat'.
+## Infos diverses
+Environ une quinzaine de citations par auteur.
+
+Compatible avec les commandes `cowsay` et `lolcat`.
 
 ### Liste des auteurs
 - Friedrich Engels
@@ -70,7 +74,7 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Clara Zetkin
 
 ### Alias déjà enregistrés
-- trotski --> trotski
+- trotski --> trotsky
 - marxengels --> marx-engels
 - engelsmarx --> marx-engels
 - engels-marx --> marx-engels
@@ -80,4 +84,5 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Amadeo Bordiga
 
 ## Licence
- [MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE)
+[MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE)
+```
