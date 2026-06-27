@@ -10,14 +10,17 @@ cd revolution/
 chmod +x install.sh
 sudo ./install.sh
 
+
 ### Méthode 2 : Téléchargement direct
 1. Télécharge le dernier release ou clone ce dépôt.
 2. Suis les même étape de précédemment.
+
 
 # Utilisation 
 revolution : Affiche une citation aléatoire
 revolution <auteur> ex : lenine : Affiche une citation de Lénine
 revolution trotski : fonctionne aussi avec des alias (trotski --> trotsky)
+
 
 # Personnalisation
 
