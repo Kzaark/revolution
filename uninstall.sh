@@ -17,5 +17,5 @@ rm -f "$BIN_DIR/revolution"
 rm -rf "$INSTALL_DIR"
 
 # Message de confirmation
-echo "✅ Désinstallation terminée."
+echo "Désinstallation terminée."
 echo "   La commande 'revolution' a été supprimée."
