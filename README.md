@@ -17,9 +17,9 @@ sudo ./install.sh
 
 
 ## Utilisation 
-revolution : Affiche une citation aléatoire
-revolution <auteur> ex : lenine : Affiche une citation de Lénine
-revolution trotski : fonctionne aussi avec des alias (trotski --> trotsky)
+revolution            → Affiche une citation aléatoire parmi tous les auteurs
+revolution lenine     → Affiche une citation de Lénine
+revolution trotski    → Les alias fonctionnent aussi (trotski → trotsky)
 
 
 ## Personnalisation
