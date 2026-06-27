@@ -37,9 +37,13 @@ def extraire_source(citation):
         return citation[:match.start()].strip(), match.group(1)
     return citation, None
 
+def lister_auteurs():
+    for cle, valeur in AUTEURS_CONFIG.items():
+        print(f"  {cle:<15} → {valeur['nom']}")
+
 def afficher_citation(auteur=None):
     if auteur:
-        auteur = AUTEURS_ALIASES.get(auteur, auteur)  # résout l'alias
+        auteur = AUTEURS_ALIASES.get(auteur, auteur)
 
     fichiers = [f for f in os.listdir(FORTUNES_DIR) if f in AUTEURS_CONFIG]
 
@@ -65,4 +69,7 @@ def afficher_citation(auteur=None):
     print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
 
 if __name__ == "__main__":
-    afficher_citation(sys.argv[1] if len(sys.argv) > 1 else None)
+    if len(sys.argv) > 1 and sys.argv[1] == "--list":
+        lister_auteurs()
+    else:
+        afficher_citation(sys.argv[1] if len(sys.argv) > 1 else None)
