@@ -32,11 +32,12 @@ revolution trotski : fonctionne aussi avec des alias (trotski --> trotsky)
 " deuxième ciation. "
 
 2. Ajoute-le dans le scripts/revolution.py :
+```python
 AUTEURS_CONFIG = {
 	"bordiga": {"nom" : "Amadeo Bordiga"},
 	...
 }
-
+```
 
 ## Ajouter un alias
 
