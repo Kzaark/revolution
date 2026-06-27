@@ -1,4 +1,3 @@
-**Toujours en cours d'amélioration et de changement, des touches `help`, `list` et `<auteur> all` vont arriver.**
 # revolution
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 
@@ -14,14 +13,16 @@ sudo ./install.sh
 
 ### Méthode 2 : Téléchargement direct
 1. Télécharge le dernier release ou clone du dépôt.
-2. Suis les même étapes que précédemment.
-
+2. Suis les mêmes étapes que précédemment.
 
 ## Utilisation
 ```bash
-revolution            → Affiche une citation aléatoire parmi tous les auteurs
-revolution lenine     → Affiche une citation de Lénine
-revolution trotski    → Les alias fonctionnent aussi (trotski → trotsky)
+revolution                  → Affiche une citation aléatoire parmi tous les auteurs
+revolution <auteur>         → Affiche une citation d'un auteur précis
+revolution --all <auteur>   → Affiche toutes les citations d'un auteur
+revolution --list           → Liste tous les auteurs disponibles
+revolution --aliases        → Liste tous les alias disponibles
+revolution --help           → Affiche l'aide
 ```
 
 ## Personnalisation
@@ -84,4 +85,4 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 - Amadeo Bordiga
 
 ## Licence
-[MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE)
+[MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE).
