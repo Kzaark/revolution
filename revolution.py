@@ -18,6 +18,14 @@ AUTEURS_CONFIG = {
     "zetkin": {"nom": "Clara Zetkin"},
 }
 
+# Alias
+AUTEURS_ALIASES = {
+    "trotski": "trotsky",
+    "marxengels": "marx-engels",
+    "engelsmarx": "marx-engels",
+    "engels-marx": "marx-engels",
+}
+
 def lire_citations(fichier):
     with open(fichier, 'r', encoding='utf-8') as f:
         contenu = f.read()
