@@ -12,7 +12,7 @@ sudo ./install.sh
 ```
 
 ### Méthode 2 : Téléchargement direct
-1. Télécharge le dernier release ou clone ce dépôt.
+1. Télécharge le dernier release ou clone du dépôt.
 2. Suis les même étape de précédemment.
 
 
@@ -53,6 +53,23 @@ AUTEURS_ALIASES = {
 ```bash
 sudo ./uninstall.sh
 ```
+# Infos diverses
+Environ une quinzaine de citations par auteurs.
+
+Compatible avec les commandes 'cowsay' et 'lolcat'.
+
+## Liste des auteurs
+- Friedrich Engels
+- Karl Marx
+  - Karl Marx et Friedrich Engels (citations communes)
+- Lénine
+- Rosa Luxemburg
+- Trotsky
+- Clara Zetkin
+
+## Auteurs à venir
+- Antonio Gramsci
+- Amadeo Bordiga
 
 # Licence
  MIT
