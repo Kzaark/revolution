@@ -42,14 +42,17 @@ AUTEURS_CONFIG = {
 ## Ajouter un alias
 
 Modifie scripts/revolution.py :
+```python
 AUTEURS_ALIASES = {
 	"trotski" : "trotsky",
 	"marxengels": "marx-engels",
 }
+```
 
 # Désinstallation
-
+```bash
 sudo ./uninstall.sh
+```
 
 # Licence
  MIT
