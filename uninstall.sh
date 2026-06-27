@@ -10,7 +10,7 @@ fi
 INSTALL_DIR="/usr/local/share/revolution"
 BIN_DIR="/usr/local/bin"
 
-# Suppression wrappe
+# Suppression wrapper
 rm -f "$BIN_DIR/revolution"
 
 # Suppression dossier d'installation
