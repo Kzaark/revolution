@@ -13,7 +13,7 @@ sudo ./install.sh
 
 ### Méthode 2 : Téléchargement direct
 1. Télécharge le dernier release ou clone du dépôt.
-2. Suis les même étape de précédemment.
+2. Suis les même étape que précédemment.
 
 
 ## Utilisation 
