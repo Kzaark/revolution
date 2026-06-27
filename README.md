@@ -1,5 +1,5 @@
 # revolution
-Gadget pour afficher des citations marxistes dans son terminal, inspiré de la commande 'fortune'.
+Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande 'fortune'.
 
 ## Installation
 
