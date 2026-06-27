@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 import random
 import sys
@@ -37,15 +38,40 @@ def extraire_source(citation):
         return citation[:match.start()].strip(), match.group(1)
     return citation, None
 
+def afficher_aide():
+    print("""
+revolution — Citations marxistes dans ton terminal
+
+Usage :
+  revolution                  Affiche une citation aléatoire
+  revolution <auteur>         Affiche une citation d'un auteur précis
+  revolution --all <auteur>   Affiche toutes les citations d'un auteur
+  revolution --list           Liste tous les auteurs disponibles
+  revolution --aliases        Liste tous les alias disponibles
+  revolution --help           Affiche ce message
+
+Exemples :
+  revolution lenine
+  revolution trotski
+  revolution --all luxemburg
+  revolution --list
+""")
+
 def lister_auteurs():
+    print("Auteurs disponibles :\n")
     for cle, valeur in AUTEURS_CONFIG.items():
         print(f"  {cle:<15} → {valeur['nom']}")
+
+def lister_aliases():
+    print("Alias disponibles :\n")
+    for alias, cible in AUTEURS_ALIASES.items():
+        print(f"  {alias:<15} → {cible}")
 
 def afficher_toutes_citations(auteur):
     auteur = AUTEURS_ALIASES.get(auteur, auteur)
 
     if auteur not in AUTEURS_CONFIG:
-        print(f"Auteur '{auteur}' introuvable.")
+        print(f"Auteur '{auteur}' introuvable. Lance 'revolution --list' pour voir les auteurs disponibles.")
         return
 
     chemin = os.path.join(FORTUNES_DIR, auteur)
@@ -78,7 +104,7 @@ def afficher_citation(auteur=None):
 
     fichier = random.choice(fichiers) if not auteur else next((f for f in fichiers if f == auteur), None)
     if not fichier:
-        print(f"Auteur '{auteur}' introuvable.")
+        print(f"Auteur '{auteur}' introuvable. Lance 'revolution --list' pour voir les auteurs disponibles.")
         return
 
     citations = lire_citations(os.path.join(FORTUNES_DIR, fichier))
@@ -94,8 +120,12 @@ def afficher_citation(auteur=None):
     print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--list":
+    if len(sys.argv) > 1 and sys.argv[1] in ("--help", "-h"):
+        afficher_aide()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--list":
         lister_auteurs()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--aliases":
+        lister_aliases()
     elif len(sys.argv) > 2 and sys.argv[1] == "--all":
         afficher_toutes_citations(sys.argv[2])
     elif len(sys.argv) > 1 and sys.argv[1] == "--all":
