@@ -85,4 +85,4 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 - Amadeo Bordiga
 
 ## Licence
-[MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE).
+[GNU GPL-3.0](https://github.com/Kzaark/revolution/blob/main/LICENCE).
