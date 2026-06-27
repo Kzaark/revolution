@@ -5,7 +5,7 @@ import os
 import re
 
 # Chemin
-FORTUNES_DIR = "/usr/local/share/terminal-fortunes"
+FORTUNES_DIR = "/usr/local/share/revolution"
 
 # Configuration auteurs
 AUTEURS_CONFIG = {
@@ -13,7 +13,7 @@ AUTEURS_CONFIG = {
     "engels": {"nom": "Friedrich Engels"},
     "marx-engels": {"nom": "Marx & Engels"},
     "lenine": {"nom": "Lénine"},
-    "trotsky": {"nom": "Léon Trotski"},
+    "trotsky": {"nom": "Léon Trotsky"},
     "luxemburg": {"nom": "Rosa Luxemburg"},
     "zetkin": {"nom": "Clara Zetkin"},
 }
@@ -38,10 +38,11 @@ def extraire_source(citation):
     return citation, None
 
 def afficher_citation(auteur=None):
-    fichiers = [
-        f for f in os.listdir(FORTUNES_DIR)
-        if os.path.isfile(os.path.join(FORTUNES_DIR, f)) and not f.startswith('.')
-    ]
+    if auteur:
+        auteur = AUTEURS_ALIASES.get(auteur, auteur)  # résout l'alias
+
+    fichiers = [f for f in os.listdir(FORTUNES_DIR) if f in AUTEURS_CONFIG]
+
     if not fichiers:
         print(f"Aucun fichier trouvé dans {FORTUNES_DIR}")
         return
