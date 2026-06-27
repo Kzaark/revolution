@@ -1,3 +1,4 @@
+**Toujours en cours d'amélioration et de changement, des touches `help`, `list` et `<auteur> all` vont arriver.**
 # revolution
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 
