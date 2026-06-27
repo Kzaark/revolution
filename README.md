@@ -34,7 +34,7 @@ revolution trotski : fonctionne aussi avec des alias (trotski --> trotsky)
 2. Ajoute-le dans le scripts/revolution.py :
 ```python
 AUTEURS_CONFIG = {
-	"bordiga": {"nom" : "Amadeo Bordiga"},
+	"bordiga": {"nom": "Amadeo Bordiga"},
 	...
 }
 ```
@@ -44,7 +44,7 @@ AUTEURS_CONFIG = {
 Modifie scripts/revolution.py :
 ```python
 AUTEURS_ALIASES = {
-	"trotski" : "trotsky",
+	"trotski": "trotsky",
 	"marxengels": "marx-engels",
 }
 ```
@@ -66,6 +66,12 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Rosa Luxemburg
 - Trotsky
 - Clara Zetkin
+
+## Alias déjà enregistré
+- trotski --> trotski
+- marxengels --> marx-engels
+- engelsmarx --> marx-engels
+- engels-marx --> marx-engels
 
 ## Auteurs à venir
 - Antonio Gramsci
