@@ -80,4 +80,4 @@ Compatible avec les commandes 'cowsay' et 'lolcat'.
 - Amadeo Bordiga
 
 # Licence
- MIT
+ [MIT](https://github.com/Kzaark/revolution/blob/main/LICENCE)
