@@ -2,7 +2,7 @@
 
 # Vérification du que le script en root
 if [ "$(id -u)" -ne 0 ]; then
-    echo "⚠️  Ce script doit être exécuté en tant que root (utilise 'sudo')."
+    echo "Ce script doit être exécuté en tant que root (utilise 'sudo')."
     exit 1
 fi
 
@@ -18,4 +18,4 @@ rm -rf "$INSTALL_DIR"
 
 # Message de confirmation
 echo "Désinstallation terminée."
-echo "   La commande 'revolution' a été supprimée."
+echo "La commande 'revolution' a été supprimée."
