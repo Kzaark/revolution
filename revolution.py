@@ -41,6 +41,31 @@ def lister_auteurs():
     for cle, valeur in AUTEURS_CONFIG.items():
         print(f"  {cle:<15} → {valeur['nom']}")
 
+def afficher_toutes_citations(auteur):
+    auteur = AUTEURS_ALIASES.get(auteur, auteur)
+
+    if auteur not in AUTEURS_CONFIG:
+        print(f"Auteur '{auteur}' introuvable.")
+        return
+
+    chemin = os.path.join(FORTUNES_DIR, auteur)
+    citations = lire_citations(chemin)
+
+    if not citations:
+        print(f"Aucun contenu pour '{auteur}'.")
+        return
+
+    nom_auteur = AUTEURS_CONFIG[auteur]["nom"]
+    print(f"=== {nom_auteur} ({len(citations)} citations) ===\n")
+
+    for i, citation in enumerate(citations, 1):
+        texte, source = extraire_source(citation)
+        print(texte)
+        print()
+        print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+        if i < len(citations):
+            print("\n" + "─" * 40 + "\n")
+
 def afficher_citation(auteur=None):
     if auteur:
         auteur = AUTEURS_ALIASES.get(auteur, auteur)
@@ -71,5 +96,9 @@ def afficher_citation(auteur=None):
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--list":
         lister_auteurs()
+    elif len(sys.argv) > 2 and sys.argv[1] == "--all":
+        afficher_toutes_citations(sys.argv[2])
+    elif len(sys.argv) > 1 and sys.argv[1] == "--all":
+        print("Usage : revolution --all <auteur>")
     else:
         afficher_citation(sys.argv[1] if len(sys.argv) > 1 else None)
