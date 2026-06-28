@@ -1,4 +1,4 @@
-# 🚩 `revolution`
+<img width="428" height="277" alt="image" src="https://github.com/user-attachments/assets/200fb030-9003-407f-bae5-6896508b1f63" /><img width="428" height="277" alt="image" src="https://github.com/user-attachments/assets/76b8922c-27a1-41a0-bf91-a83e65d911ce" /># 🚩 `revolution`
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 
 ## Installation
@@ -87,7 +87,11 @@ sudo ./uninstall.sh
 Environ une quinzaine de citations par auteur.
 
 Compatible avec les commandes `cowsay` et `lolcat`.
-![Fortune + Cowsay.](https://github.com/Kzaark/revolution/blob/main/static/images/revolution-cowsay.png?raw=true)
+
+![Fortune + Cowsay.](https://github.com/Kzaark/revolution/blob/main/static/images/revolution-cowsay.png?raw=true) `fortune | cowsay`
+![Fortune + Lolcat.](https://github.com/Kzaark/revolution/blob/main/static/images/revolution-lolcat.png?raw=true) `fortune | lolcat`
+![Fortune + Cowsay + Lolcat.](<img width="428" height="277" alt="image" src="https://github.com/user-attachments/assets/96f72d3d-3d67-4b2e-a49f-622f71a69730" />) Ultime : `fortune | cowsay | lolcat`
+
 
 ### Liste des auteurs
 - Friedrich Engels
