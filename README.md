@@ -1,9 +1,14 @@
 # 🚩 `revolution`
+
+Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
+
 ![Licence](https://img.shields.io/badge/licence-GPL--3.0-red?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.x-blue?style=flat-square&logo=python)
 ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square&logo=linux)
-![Terminal](https://img.shields.io/badge/terminal-bash%20%7C%20zsh-black?style=flat-square)
+![Terminal](https://img.shields.io/badge/terminal-bash%20%7C%20zsh%20%7C%20fish-black?style=flat-square)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square)
+
+---
 
 ## Table des matières
 - [Prérequis](#prérequis)
@@ -17,7 +22,6 @@
 - [Infos diverses](#infos-diverses)
 - [Licence](#licence)
 
-Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 ---
 
 ## Prérequis
@@ -31,6 +35,8 @@ sudo apt install cowsay lolcat   # Debian/Ubuntu
 sudo pacman -S cowsay lolcat     # Arch
 brew install cowsay lolcat       # macOS
 ```
+
+---
 
 ## Installation
 
@@ -46,6 +52,8 @@ sudo ./install.sh
 1. Télécharge le dernier release ou clone du dépôt.
 2. Suis les mêmes étapes que précédemment.
 
+---
+
 ## Utilisation
 ```bash
 revolution                    → Affiche une citation aléatoire parmi tous les auteurs
@@ -59,6 +67,8 @@ revolution --update           → Met à jour revolution
 revolution --help             → Affiche l'aide
 ```
 
+---
+
 ## Exemple de sortie
 
 ```
@@ -68,19 +78,23 @@ $ revolution lénine
   — Lénine
 ```
 
+---
+
 ## Mise à jour
 Une fois installé, tu peux mettre à jour revolution directement depuis le terminal :
 ```bash
 revolution --update
 ```
 
+---
+
 ## Intégration au terminal
 Compatible avec **Bash**, **Zsh** et **Fish**.
 
 Pour afficher une citation à chaque ouverture de terminal, ajoute cette ligne à ton fichier de config :
 
-| Shell | Fichier |
-|-------|---------|
+| Shell | Fichier de config |
+|-------|-------------------|
 | Bash  | `~/.bashrc` |
 | Zsh   | `~/.zshrc` |
 | Fish  | `~/.config/fish/config.fish` |
@@ -96,11 +110,13 @@ source ~/.zshrc    # Zsh
 exec fish          # Fish
 ```
 
+---
+
 ## Personnalisation
 
 ### Ajouter un nouvel auteur
-1. Crée un fichier texte (ex : `"bordiga"`) dans le dossier du projet avec les citations :
-``` bash
+1. Crée un fichier texte (ex : `bordiga`) dans le dossier du projet avec les citations :
+```
 " citation texte. " (ouvrage/source)
 %
 " deuxième citation. "
@@ -124,10 +140,14 @@ AUTEURS_ALIASES = {
 }
 ```
 
+---
+
 ## Désinstallation
 ```bash
 sudo ./uninstall.sh
 ```
+
+---
 
 ## Infos diverses
 
@@ -169,11 +189,13 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 - Raya Dunayevskaya
 
 ### Alias déjà enregistrés
-- `trotski` --> `trotsky`
-- `marxengels` --> `marx-engels`
-- `engelsmarx` --> `marx-engels`
-- `engels-marx` --> `marx-engels`
-- `kollontaï` --> `kollontai`
+- `trotski` → `trotsky`
+- `marxengels` → `marx-engels`
+- `engelsmarx` → `marx-engels`
+- `engels-marx` → `marx-engels`
+- `kollontaï` → `kollontai`
+
+---
 
 ## Licence
 [GNU GPL-3.0](https://github.com/Kzaark/revolution/blob/main/LICENCE)
