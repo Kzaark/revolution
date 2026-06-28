@@ -2,7 +2,9 @@
 <p align="center">
   Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 </p>
-<a rel="me" href="https://union.place/@Kzaark">Mastodon</a>
+<p align="right">
+  <a rel="me" href="https://union.place/@Kzaark">Mastodon</a>
+  </p>
 
 ![Licence](https://img.shields.io/badge/licence-GPL--3.0-red?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.x-blue?style=flat-square&logo=python)
