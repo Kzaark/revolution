@@ -17,12 +17,27 @@ sudo ./install.sh
 
 ## Utilisation
 ```bash
-revolution                  → Affiche une citation aléatoire parmi tous les auteurs
-revolution <auteur>         → Affiche une citation d'un auteur précis
-revolution --all <auteur>   → Affiche toutes les citations d'un auteur
-revolution --list           → Liste tous les auteurs disponibles
-revolution --aliases        → Liste tous les alias disponibles
-revolution --help           → Affiche l'aide
+revolution                    → Affiche une citation aléatoire parmi tous les auteurs
+revolution <auteur>           → Affiche une citation d'un auteur précis
+revolution --all <auteur>     → Affiche toutes les citations d'un auteur
+revolution --random <N>       → Affiche N citations aléatoires
+revolution --search <mot>     → Recherche un mot dans toutes les citations
+revolution --list             → Liste tous les auteurs disponibles
+revolution --aliases          → Liste tous les alias disponibles
+revolution --help             → Affiche l'aide
+```
+
+## Intégration au terminal
+
+Pour afficher une citation à chaque ouverture de terminal, ajoute cette ligne à ton `~/.bashrc` ou `~/.zshrc` :
+
+```bash
+revolution
+```
+
+Puis recharge la config :
+```bash
+source ~/.bashrc  # ou source ~/.zshrc
 ```
 
 ## Personnalisation
@@ -85,4 +100,4 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 - Amadeo Bordiga
 
 ## Licence
-[GNU GPL-3.0](https://github.com/Kzaark/revolution/blob/main/LICENCE).
+[GNU GPL-3.0](https://github.com/Kzaark/revolution/blob/main/LICENCE)
