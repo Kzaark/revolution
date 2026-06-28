@@ -14,6 +14,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
+
 import random
 import sys
 import os
@@ -57,17 +58,21 @@ def afficher_aide():
 revolution — Citations marxistes dans ton terminal
 
 Usage :
-  revolution                  Affiche une citation aléatoire
-  revolution <auteur>         Affiche une citation d'un auteur précis
-  revolution --all <auteur>   Affiche toutes les citations d'un auteur
-  revolution --list           Liste tous les auteurs disponibles
-  revolution --aliases        Liste tous les alias disponibles
-  revolution --help           Affiche ce message
+  revolution                    Affiche une citation aléatoire
+  revolution <auteur>           Affiche une citation d'un auteur précis
+  revolution --all <auteur>     Affiche toutes les citations d'un auteur
+  revolution --random <N>       Affiche N citations aléatoires
+  revolution --search <mot>     Recherche un mot dans toutes les citations
+  revolution --list             Liste tous les auteurs disponibles
+  revolution --aliases          Liste tous les alias disponibles
+  revolution --help             Affiche ce message
 
 Exemples :
   revolution lenine
   revolution trotski
   revolution --all luxemburg
+  revolution --random 5
+  revolution --search liberté
   revolution --list
 """)
 
@@ -104,6 +109,53 @@ def afficher_toutes_citations(auteur):
         print()
         print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
         if i < len(citations):
+            print("\n" + "─" * 40 + "\n")
+
+def afficher_citations_aleatoires(n):
+    fichiers = [f for f in os.listdir(FORTUNES_DIR) if f in AUTEURS_CONFIG]
+    toutes = []
+    for fichier in fichiers:
+        citations = lire_citations(os.path.join(FORTUNES_DIR, fichier))
+        for citation in citations:
+            toutes.append((fichier, citation))
+
+    if not toutes:
+        print("Aucune citation trouvée.")
+        return
+
+    selection = random.sample(toutes, min(n, len(toutes)))
+
+    for i, (fichier, citation) in enumerate(selection, 1):
+        texte, source = extraire_source(citation)
+        nom_auteur = AUTEURS_CONFIG[fichier]["nom"]
+        print(texte)
+        print()
+        print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+        if i < len(selection):
+            print("\n" + "─" * 40 + "\n")
+
+def rechercher_citations(mot):
+    fichiers = [f for f in os.listdir(FORTUNES_DIR) if f in AUTEURS_CONFIG]
+    resultats = []
+
+    for fichier in fichiers:
+        citations = lire_citations(os.path.join(FORTUNES_DIR, fichier))
+        for citation in citations:
+            if mot.lower() in citation.lower():
+                resultats.append((fichier, citation))
+
+    if not resultats:
+        print(f"Aucune citation trouvée pour '{mot}'.")
+        return
+
+    print(f"{len(resultats)} citation(s) trouvée(s) pour '{mot}' :\n")
+    for i, (fichier, citation) in enumerate(resultats, 1):
+        texte, source = extraire_source(citation)
+        nom_auteur = AUTEURS_CONFIG[fichier]["nom"]
+        print(texte)
+        print()
+        print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+        if i < len(resultats):
             print("\n" + "─" * 40 + "\n")
 
 def afficher_citation(auteur=None):
@@ -144,5 +196,16 @@ if __name__ == "__main__":
         afficher_toutes_citations(sys.argv[2])
     elif len(sys.argv) > 1 and sys.argv[1] == "--all":
         print("Usage : revolution --all <auteur>")
+    elif len(sys.argv) > 2 and sys.argv[1] == "--random":
+        try:
+            afficher_citations_aleatoires(int(sys.argv[2]))
+        except ValueError:
+            print("Usage : revolution --random <nombre>")
+    elif len(sys.argv) > 1 and sys.argv[1] == "--random":
+        print("Usage : revolution --random <nombre>")
+    elif len(sys.argv) > 2 and sys.argv[1] == "--search":
+        rechercher_citations(sys.argv[2])
+    elif len(sys.argv) > 1 and sys.argv[1] == "--search":
+        print("Usage : revolution --search <mot>")
     else:
         afficher_citation(sys.argv[1] if len(sys.argv) > 1 else None)
