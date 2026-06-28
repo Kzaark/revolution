@@ -1,5 +1,22 @@
 # 🚩 `revolution`
+![Licence](https://img.shields.io/badge/licence-GPL--3.0-red?style=flat-square)
+![Python](https://img.shields.io/badge/python-3.x-blue?style=flat-square&logo=python)
+![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square&logo=linux)
+![Terminal](https://img.shields.io/badge/terminal-bash%20%7C%20zsh-black?style=flat-square)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square)
+
+## Table des matières
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Mise à jour](#mise-à-jour)
+- [Intégration au terminal](#intégration-au-terminal)
+- [Personnalisation](#personnalisation)
+- [Désinstallation](#désinstallation)
+- [Infos diverses](#infos-diverses)
+- [Licence](#licence)
+
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
+---
 
 ## Installation
 
@@ -35,13 +52,25 @@ revolution --update
 ```
 
 ## Intégration au terminal
-Pour afficher une citation à chaque ouverture de terminal, ajoute cette ligne à ton `~/.bashrc` ou `~/.zshrc` :
+Compatible avec **Bash**, **Zsh** et **Fish**.
+
+Pour afficher une citation à chaque ouverture de terminal, ajoute cette ligne à ton fichier de config :
+
+| Shell | Fichier |
+|-------|---------|
+| Bash  | `~/.bashrc` |
+| Zsh   | `~/.zshrc` |
+| Fish  | `~/.config/fish/config.fish` |
+
 ```bash
 revolution
 ```
+
 Puis recharge la config :
 ```bash
-source ~/.bashrc  # ou source ~/.zshrc
+source ~/.bashrc   # Bash
+source ~/.zshrc    # Zsh
+exec fish          # Fish
 ```
 
 ## Personnalisation
