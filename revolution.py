@@ -19,6 +19,7 @@ import random
 import sys
 import os
 import re
+from easteregg import afficher_easteregg
 
 # Chemin
 FORTUNES_DIR = "/usr/local/share/revolution"
@@ -44,7 +45,7 @@ AUTEURS_ALIASES = {
     "marxengels": "marx-engels",
     "engelsmarx": "marx-engels",
     "engels-marx": "marx-engels",
-    "kollontaï": "kollontaï",
+    "kollontaï": "kollontai",
 }
 
 def lire_citations(fichier):
@@ -212,5 +213,7 @@ if __name__ == "__main__":
         rechercher_citations(sys.argv[2])
     elif len(sys.argv) > 1 and sys.argv[1] == "--search":
         print("Usage : revolution --search <mot>")
+    elif len(sys.argv) > 1 and sys.argv[1] == "--lol":
+        afficher_easteregg()
     else:
         afficher_citation(sys.argv[1] if len(sys.argv) > 1 else None)
