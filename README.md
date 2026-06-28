@@ -200,5 +200,3 @@ Compatible avec les commandes `cowsay` et `lolcat`.
 
 ## Licence
 [GNU GPL-3.0](https://github.com/Kzaark/revolution/blob/main/LICENCE)
-
-<a rel="me" href="https://union.place/@Kzaark"></a>
