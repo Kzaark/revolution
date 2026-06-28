@@ -23,7 +23,7 @@ import subprocess
 from easteregg import afficher_easteregg
 
 # Version
-VERSION = "1.0.0"
+VERSION = "1.3.0"
 
 # Chemin
 FORTUNES_DIR = "/usr/local/share/revolution"
