@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0] - 2026-06-28
+
+### Nouveautés
+- Colorisation native de la sortie (citations en jaune, auteurs en rouge, sources en italique)
+- Ajout de l'option `--version` / `-v`
+
+
 ## [1.1.0] - 2026-06-28
 
 ### Ajout(s)
