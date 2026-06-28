@@ -28,6 +28,7 @@ AUTEURS_CONFIG = {
     "marx": {"nom": "Karl Marx"},
     "engels": {"nom": "Friedrich Engels"},
     "marx-engels": {"nom": "Marx & Engels"},
+    "gramsci": {"nom": "Antonio Gramsci"},
     "lenine": {"nom": "Lénine"},
     "trotsky": {"nom": "Léon Trotsky"},
     "luxemburg": {"nom": "Rosa Luxemburg"},
