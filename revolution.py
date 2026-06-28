@@ -29,6 +29,7 @@ AUTEURS_CONFIG = {
     "engels": {"nom": "Friedrich Engels"},
     "marx-engels": {"nom": "Marx & Engels"},
     "gramsci": {"nom": "Antonio Gramsci"},
+    "kollontai": {"nom": "Alexandra Kollontaï"},
     "lenine": {"nom": "Lénine"},
     "trotsky": {"nom": "Léon Trotsky"},
     "luxemburg": {"nom": "Rosa Luxemburg"},
@@ -41,6 +42,7 @@ AUTEURS_ALIASES = {
     "marxengels": "marx-engels",
     "engelsmarx": "marx-engels",
     "engels-marx": "marx-engels",
+    "kollontaï": "kollontaï",
 }
 
 def lire_citations(fichier):
