@@ -22,6 +22,9 @@ import re
 import subprocess
 from easteregg import afficher_easteregg
 
+# Version
+VERSION = "1.0.0"
+
 # Chemin
 FORTUNES_DIR = "/usr/local/share/revolution"
 
@@ -49,6 +52,20 @@ AUTEURS_ALIASES = {
     "kollontaï": "kollontai",
 }
 
+# Couleurs ANSI
+class Couleurs:
+    ROUGE    = "\033[91m"
+    JAUNE    = "\033[93m"
+    ITALIQUE = "\033[3m"
+    RESET    = "\033[0m"
+
+def formater_citation(citation, nom_auteur, source=None):
+    texte  = f"{Couleurs.JAUNE}{citation}{Couleurs.RESET}"
+    attrib = f"    -- {Couleurs.ROUGE}{nom_auteur}{Couleurs.RESET}"
+    if source:
+        attrib += f", {Couleurs.ITALIQUE}{source}{Couleurs.RESET}"
+    return texte, attrib
+
 def lire_citations(fichier):
     with open(fichier, 'r', encoding='utf-8') as f:
         contenu = f.read()
@@ -73,6 +90,7 @@ Usage :
   revolution --list             Liste tous les auteurs disponibles
   revolution --aliases          Liste tous les alias disponibles
   revolution --update           Met à jour revolution
+  revolution --version          Affiche la version installée
   revolution --help             Affiche ce message
 
 Exemples :
@@ -83,6 +101,9 @@ Exemples :
   revolution --search liberté
   revolution --list
 """)
+
+def afficher_version():
+    print(f"revolution v{VERSION}")
 
 def lister_auteurs():
     print("Auteurs disponibles :\n")
@@ -122,10 +143,11 @@ def afficher_toutes_citations(auteur):
     print(f"=== {nom_auteur} ({len(citations)} citations) ===\n")
 
     for i, citation in enumerate(citations, 1):
-        texte, source = extraire_source(citation)
+        texte_brut, source = extraire_source(citation)
+        texte, attrib = formater_citation(texte_brut, nom_auteur, source)
         print(texte)
         print()
-        print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+        print(attrib)
         if i < len(citations):
             print("\n" + "─" * 40 + "\n")
 
@@ -144,11 +166,12 @@ def afficher_citations_aleatoires(n):
     selection = random.sample(toutes, min(n, len(toutes)))
 
     for i, (fichier, citation) in enumerate(selection, 1):
-        texte, source = extraire_source(citation)
+        texte_brut, source = extraire_source(citation)
         nom_auteur = AUTEURS_CONFIG[fichier]["nom"]
+        texte, attrib = formater_citation(texte_brut, nom_auteur, source)
         print(texte)
         print()
-        print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+        print(attrib)
         if i < len(selection):
             print("\n" + "─" * 40 + "\n")
 
@@ -168,11 +191,12 @@ def rechercher_citations(mot):
 
     print(f"{len(resultats)} citation(s) trouvée(s) pour '{mot}' :\n")
     for i, (fichier, citation) in enumerate(resultats, 1):
-        texte, source = extraire_source(citation)
+        texte_brut, source = extraire_source(citation)
         nom_auteur = AUTEURS_CONFIG[fichier]["nom"]
+        texte, attrib = formater_citation(texte_brut, nom_auteur, source)
         print(texte)
         print()
-        print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+        print(attrib)
         if i < len(resultats):
             print("\n" + "─" * 40 + "\n")
 
@@ -196,16 +220,19 @@ def afficher_citation(auteur=None):
         print(f"Aucun contenu dans {fichier}.")
         return
 
-    citation, source = extraire_source(random.choice(citations))
+    texte_brut, source = extraire_source(random.choice(citations))
     nom_auteur = AUTEURS_CONFIG.get(fichier, {}).get("nom", fichier)
+    texte, attrib = formater_citation(texte_brut, nom_auteur, source)
 
-    print(citation)
+    print(texte)
     print()
-    print(f"    -- {nom_auteur}" + (f", \033[3m{source}\033[0m" if source else ""))
+    print(attrib)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] in ("--help", "-h"):
         afficher_aide()
+    elif len(sys.argv) > 1 and sys.argv[1] in ("--version", "-v"):
+        afficher_version()
     elif len(sys.argv) > 1 and sys.argv[1] == "--list":
         lister_auteurs()
     elif len(sys.argv) > 1 and sys.argv[1] == "--aliases":
