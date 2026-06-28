@@ -1,6 +1,5 @@
   # 🚩 `revolution`
-<p align="center">
-**Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
+<p align="center">**Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 **</p>
 
 ![Licence](https://img.shields.io/badge/licence-GPL--3.0-red?style=flat-square)
