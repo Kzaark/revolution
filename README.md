@@ -1,4 +1,4 @@
-<img width="428" height="277" alt="image" src="https://github.com/user-attachments/assets/200fb030-9003-407f-bae5-6896508b1f63" /><img width="428" height="277" alt="image" src="https://github.com/user-attachments/assets/76b8922c-27a1-41a0-bf91-a83e65d911ce" /># 🚩 `revolution`
+# 🚩 `revolution`
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 
 ## Installation
@@ -29,20 +29,16 @@ revolution --help             → Affiche l'aide
 ```
 
 ## Mise à jour
-
 Une fois installé, tu peux mettre à jour revolution directement depuis le terminal :
 ```bash
 revolution --update
 ```
 
 ## Intégration au terminal
-
 Pour afficher une citation à chaque ouverture de terminal, ajoute cette ligne à ton `~/.bashrc` ou `~/.zshrc` :
-
 ```bash
 revolution
 ```
-
 Puis recharge la config :
 ```bash
 source ~/.bashrc  # ou source ~/.zshrc
@@ -51,9 +47,8 @@ source ~/.bashrc  # ou source ~/.zshrc
 ## Personnalisation
 
 ### Ajouter un nouvel auteur
-
 1. Crée un fichier texte (ex : `"bordiga"`) dans le dossier du projet avec les citations :
-```
+``` bash
 " citation texte. " (ouvrage/source)
 %
 " deuxième citation. "
@@ -69,7 +64,6 @@ AUTEURS_CONFIG = {
 ```
 
 ### Ajouter un alias
-
 Modifie `revolution.py` :
 ```python
 AUTEURS_ALIASES = {
@@ -84,14 +78,30 @@ sudo ./uninstall.sh
 ```
 
 ## Infos diverses
-Environ une quinzaine de citations par auteur.
 
+Environ une quinzaine de citations par auteur.  
 Compatible avec les commandes `cowsay` et `lolcat`.
 
-![Fortune + Cowsay.](https://github.com/Kzaark/revolution/blob/main/static/images/revolution-cowsay.png?raw=true) `fortune | cowsay`
-![Fortune + Lolcat.](https://github.com/Kzaark/revolution/blob/main/static/images/revolution-lolcat.png?raw=true) `fortune | lolcat`
-![Fortune + Cowsay + Lolcat.](<img width="428" height="277" alt="image" src="https://github.com/user-attachments/assets/96f72d3d-3d67-4b2e-a49f-622f71a69730" />) Ultime : `fortune | cowsay | lolcat`
-
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/Kzaark/revolution/blob/main/static/images/revolution-cowsay.png?raw=true" alt="revolution | cowsay" width="428" height="277" /><br/>
+        <code>revolution | cowsay</code>
+      </td>
+      <td align="center">
+        <img src="https://github.com/Kzaark/revolution/blob/main/static/images/revolution-lolcat.png?raw=true" alt="revolution | lolcat" width="428" height="277" /><br/>
+        <code>revolution | lolcat</code>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <img src="https://github.com/user-attachments/assets/96f72d3d-3d67-4b2e-a49f-622f71a69730" alt="revolution | cowsay | lolcat" width="428" height="277" /><br/>
+        Ultime : <code>revolution | cowsay | lolcat</code>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ### Liste des auteurs
 - Friedrich Engels
