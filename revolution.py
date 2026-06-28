@@ -26,6 +26,7 @@ FORTUNES_DIR = "/usr/local/share/revolution"
 # Configuration auteurs
 AUTEURS_CONFIG = {
     "bordiga": {"nom": "Amadeo Bordiga"},
+    "dunayevskaya": {"nom": "Raya Dunayevskaya"},
     "marx": {"nom": "Karl Marx"},
     "engels": {"nom": "Friedrich Engels"},
     "marx-engels": {"nom": "Marx & Engels"},
