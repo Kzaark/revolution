@@ -6,8 +6,10 @@
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square)
 
 ## Table des matières
+- [Prérequis](#prérequis)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
+- [Exemple de sortie](#exemple-de-sortie)
 - [Mise à jour](#mise-à-jour)
 - [Intégration au terminal](#intégration-au-terminal)
 - [Personnalisation](#personnalisation)
@@ -17,6 +19,18 @@
 
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 ---
+
+## Prérequis
+
+- Python 3.x
+- Git
+- (Optionnel) `cowsay` et/ou `lolcat` pour les combinaisons fun
+
+```bash
+sudo apt install cowsay lolcat   # Debian/Ubuntu
+sudo pacman -S cowsay lolcat     # Arch
+brew install cowsay lolcat       # macOS
+```
 
 ## Installation
 
@@ -43,6 +57,15 @@ revolution --list             → Liste tous les auteurs disponibles
 revolution --aliases          → Liste tous les alias disponibles
 revolution --update           → Met à jour revolution
 revolution --help             → Affiche l'aide
+```
+
+## Exemple de sortie
+
+```
+$ revolution lénine
+
+« Toute révolution n'a de valeur que si elle sait se défendre. »
+  — Lénine
 ```
 
 ## Mise à jour
