@@ -87,6 +87,7 @@ sudo ./uninstall.sh
 Environ une quinzaine de citations par auteur.
 
 Compatible avec les commandes `cowsay` et `lolcat`.
+![Fortune + Cowsay.](https://github.com/Kzaark/revolution/blob/main/static/images/revolution-cowsay.png?raw=true)
 
 ### Liste des auteurs
 - Friedrich Engels
