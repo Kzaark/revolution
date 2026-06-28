@@ -10,13 +10,23 @@ if ! command -v python3 &>/dev/null; then
     exit 1
 fi
 
-SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if ! command -v git &>/dev/null; then
+    echo "Erreur : git est requis mais introuvable."
+    exit 1
+fi
+
 INSTALL_DIR="/usr/local/share/revolution"
 BIN_DIR="/usr/local/bin"
 
-mkdir -p "$INSTALL_DIR" "$BIN_DIR"
+mkdir -p "$BIN_DIR"
 
-find "$SOURCE_DIR" -maxdepth 1 -type f ! -name "install.sh" ! -name "uninstall.sh" ! -name ".git*" -exec cp {} "$INSTALL_DIR" \;
+if [ -d "$INSTALL_DIR/.git" ]; then
+    echo "Mise à jour du dépôt existant..."
+    git -C "$INSTALL_DIR" pull
+else
+    echo "Clonage du dépôt..."
+    git clone https://github.com/Kzaark/revolution.git "$INSTALL_DIR"
+fi
 
 cat > "$BIN_DIR/revolution" << 'EOF'
 #!/bin/bash
