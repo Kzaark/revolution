@@ -24,7 +24,15 @@ revolution --random <N>       → Affiche N citations aléatoires
 revolution --search <mot>     → Recherche un mot dans toutes les citations
 revolution --list             → Liste tous les auteurs disponibles
 revolution --aliases          → Liste tous les alias disponibles
+revolution --update           → Met à jour revolution
 revolution --help             → Affiche l'aide
+```
+
+## Mise à jour
+
+Une fois installé, tu peux mettre à jour revolution directement depuis le terminal :
+```bash
+revolution --update
 ```
 
 ## Intégration au terminal
