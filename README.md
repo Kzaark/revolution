@@ -1,4 +1,4 @@
-# revolution
+# 🚩 `revolution`
 Gadget pour afficher des citations marxistes dans le terminal Linux, inspiré de la commande `fortune`.
 
 ## Installation
