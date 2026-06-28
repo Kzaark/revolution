@@ -86,18 +86,19 @@ Compatible avec les commandes `cowsay` et `lolcat`.
   - Karl Marx et Friedrich Engels (citations communes)
 - Lénine
 - Rosa Luxemburg
-- Trotsky
+- Léon Trotsky
 - Clara Zetkin
+- Antonio Gramsci
+- Amadeo Bordiga
+- Alexandra Kollontaï
+- Raya Dunayevskaya
 
 ### Alias déjà enregistrés
 - `trotski` --> `trotsky`
 - `marxengels` --> `marx-engels`
 - `engelsmarx` --> `marx-engels`
 - `engels-marx` --> `marx-engels`
-
-### Auteurs à venir
-- Antonio Gramsci
-- Amadeo Bordiga
+- `kollontaï` --> `kollontai`
 
 ## Licence
 [GNU GPL-3.0](https://github.com/Kzaark/revolution/blob/main/LICENCE)
